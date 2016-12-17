@@ -100,10 +100,8 @@ html, body, .body{
 	flex-basis: 100%;
 	min-height: 50px;
 }
-#main  .enter .enter-button{
+.enter-button{
 	display: none;
-}
-form{
 }
 
 #foot{
@@ -130,4 +128,20 @@ form{
 	background-color: LightSkyBlue;
 	text-decoration: none;
 }
+#form-addroom{
+	padding-top: 20px;
+	
+}
+#createroom{
+	padding: 10px;
+	color: CornflowerBlue;
+}
+#profileform{
+	min-height: 500px;
+	padding: 20px;
+}
+#profileform label{
+	padding-left: 10px;
+}
+
 

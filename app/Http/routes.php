@@ -14,9 +14,13 @@ Route::auth();
 Route::get('/', 'BaseController@getIndex');
 Route::get('/home', 'HomeController@index');
 Route::get('/rooms', 'RoomController@getIndex');
+Route::get('/profile', 'ProfileController@getIndex');
+Route::get('/user/{id}', 'UserController@getIndex')->where('id','[0-9]');
 Route::get('/room/{id}', 'RoomController@getNum')->where('id','[0-9]');
 
 Route::post('/message/{id}','MessageController@postIndex')->where('id','[0-9]+');
+Route::post('/addroom','RoomController@postIndex');
+Route::post('/profile','ProfileController@postIndex');
 
 Route::get('/user/{id?}', function ($id=null) {
     return 'user'.$id;

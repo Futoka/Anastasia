@@ -20,7 +20,7 @@
 			<a href="{{url('/')}}" class="choise" "id="profile-menu">
 				<p>Главная</p>
 			</a>
-			<a href="" class="choise" "id="profile-menu">
+			<a href="{{url('/profile')}}" class="choise" "id="profile-menu">
 				<p>Профиль</p>
 			</a>
 			<a href="{{url('rooms')}}" class="choise" "id="room-menu">

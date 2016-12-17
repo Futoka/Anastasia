@@ -19,10 +19,15 @@ class BaseController extends Controller
 		$room='main';
 		$messages=Message::where('chat_id',1)->orderBy('id','DESC')->limit(40)->get();
 		$rooms=Room::where('showhile','show')->orderBy('id','DESC')->get();
-		//$users=user->orderBy('user_id','DESC');
-		//$
-		// {{}}
-		return view('index')->with('room',$room)->with('title',$title)->with('messages',$messages);
+		
+		$user=[];
+		foreach ($messages as $one){
+			$user[]=$one->user_id;
+		}
+		$unic_users=array_unique($user);
+		$users=User::find($unic_users);
+		
+		return view('index')->with('room',$room)->with('title',$title)->with('messages',$messages)->with('users',$users);
 	}
 	
 }

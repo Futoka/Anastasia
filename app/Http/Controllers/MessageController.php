@@ -11,8 +11,6 @@ class MessageController extends Controller
 {
     //
 	public function postIndex(Requests\MessageRequest $r){
-		//dd($r->all());
-		//dd(Auth::user()->id);
 		$r['user_id'] = Auth::user()->id;
 		$r['chat_id'] = 1;
 		message::create($r->all());

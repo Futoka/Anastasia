@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Room;
 use App\Message;
+use Auth;
+use App\User;
 
 class RoomController extends Controller
 {
@@ -17,12 +19,25 @@ class RoomController extends Controller
     public function getIndex(){   
 		$title='Социалка';
 		$rooms=Room::where('showhile','show')->orderBy('id','DESC')->get();
-		return view('rooms')->with('title',$title)->with('rooms',$rooms);
+		$users=User::all();
+		return view('rooms')->with('title',$title)->with('rooms',$rooms)->with('users',$users);
 	}
 	public function getNum($id){
 		$title='Социалка';
 		$room=Room::find($id);
 		$messages=Message::where('chat_id',$id)->orderBy('id','DESC')->limit(40)->get();
-		return view('thisroom')->with('room',$room)->with('id',$id)->with('title',$title)->with('messages',$messages);
+		
+		$user=[];
+		foreach ($messages as $one){
+			$user[]=$one->user_id;
+		}
+		$unic_users=array_unique($user);
+		$users=User::find($unic_users);
+		return view('thisroom')->with('room',$room)->with('id',$id)->with('title',$title)->with('messages',$messages)->with('users',$users);
+	}
+	public function postIndex(Requests\RoomRequest $r){
+		$r['user_id']=Auth::user()->id;
+		Room::create($r->all());
+		return redirect('/rooms');
 	}
 }

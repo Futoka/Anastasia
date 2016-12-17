@@ -34,4 +34,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	cd laravel
 	composer self-update
 	composer install
+	composer self-update
 	создать .env
+	

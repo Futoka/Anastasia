@@ -13,4 +13,7 @@ class Message extends Model
 		'body',
 		'showhide'
 	];
+	public function users(){
+		return $this->belongsTo('App\User','user_id');
+	}
 }
