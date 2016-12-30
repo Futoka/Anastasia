@@ -7,7 +7,7 @@
 	<form method='POST' action="{{asset('profile')}}" enctype="multipart/form-data">
 	{{csrf_field()}}
 		<div class="form-group">
-			<label for="exampleInputFile">Аватар</label>
+			<label>Аватар</label>
 			<input type="file" id="exampleInputFile" name="useravatar">
 			<p class="help-block">Выберете файл JPEG или PNG.</p>
 		</div>
@@ -20,7 +20,7 @@
 			<input type="text" class="form-control" name="usersurname" value="{{$user->usersurname}}">
 		</div>
 		<div class="form-group">
-			<select class="form-control" name="usersex" value="{{$user->usersex}}"><option>скрыть</option><option>мужской</option><option>женский</option></select>
+			<select class="form-control" name="usersex" value="{{$user->usersex}}"><option>скрыть</option><option>мужской</option><option>женский</option></select><p>выбрано: {{$user->usersex}}</p>
 		</div>
 		<div class="form-group">
 			<label>Контакт для связи</label>
@@ -28,7 +28,7 @@
 		</div>
 		<div class="form-group">
 			<label >О себе</label>
-			<textarea type="text" class="form-control" name="userabout" value="{{$user->userabout}}"></textarea>
+			<textarea type="text" class="form-control" name="userabout" value="{{$user->userabout}}">{{$user->userabout}}</textarea>
 		</div>
 		
 		<button type="submit" class="btn btn-primary" name="profilebutton">Сохранить изменения</button>

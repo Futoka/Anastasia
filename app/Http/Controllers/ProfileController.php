@@ -25,7 +25,9 @@ class ProfileController extends Controller
 		return view('profile')->with('title',$title)->with('user',$user);
 	}
 	public function postIndex(Requests\UserRequest $r){  
-		
+		Profile::updateOrCreate([
+			'user_id'=>Auth::user()->id
+		],$r->all());
 		return redirect('/profile');
 	}
 }

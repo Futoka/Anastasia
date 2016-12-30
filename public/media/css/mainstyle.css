@@ -143,5 +143,18 @@ html, body, .body{
 #profileform label{
 	padding-left: 10px;
 }
-
+#userprofile{
+	display: flex;
+}
+#user-avatar{
+	margin: 10px;
+	width: 150px;
+	height: 200px;
+	border: 1px solid LightSkyBlue;
+}
+#user-alltext{
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+}
 

@@ -12,7 +12,6 @@
 
 	<div class="work-window" id="work-window">
 		<div class="window" id="chat">
-		
 			@foreach($messages->reverse() as $one)
 				<p><a>{{$one->users->name}}: </a>{{$one->body}}</p>
 			@endforeach
@@ -24,7 +23,7 @@
 			@endforeach
 		</div>
 	</div>
-	<form method='POST' action="{{asset('room/'.$id)}}">  <!-- 1 - изменить на номер комнаты -->
+	<form method='POST' action="{{asset('message/'.$id)}}"> 
 	{{csrf_field()}}
 	<div class="enter" "id="enter-chat">
 		<input autofocus type="text" class="enter-text" name='body' id="area" onkeypress="Press(this.value, event)">

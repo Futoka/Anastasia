@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use App\User;
+use App\Profile;
 
 class UserController extends Controller
 {
@@ -16,7 +17,7 @@ class UserController extends Controller
     } 
 		public function getIndex($id){  
 		$title='Социалка';
-		$users=User::all();
-		return view('userprofile')->with('title',$title)->with('id',$id)->with('user',$users);
+		$user=User::where('id',$id)->first();
+		return view('userprofile')->with('title',$title)->with('id',$id)->with('user',$user);
 	}
 }

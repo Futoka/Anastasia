@@ -22,7 +22,7 @@ class RoomController extends Controller
 		$users=User::all();
 		return view('rooms')->with('title',$title)->with('rooms',$rooms)->with('users',$users);
 	}
-	public function getNum($id){
+	public function getNum($id=1){
 		$title='Социалка';
 		$room=Room::find($id);
 		$messages=Message::where('chat_id',$id)->orderBy('id','DESC')->limit(40)->get();
