@@ -9,13 +9,13 @@ html, body, .body{
 	background-color: GhostWhite;
 }
 
-#top{
-	border: 2px solid LightSkyBlue;
-	margin: 5px;
-	margin-bottom: 10px;
-	height: 45px;
-	min-height: 45px;
-	
+#top {
+    border: 2px solid LightSkyBlue;
+    margin: 5px;
+    margin-bottom: 10px;
+    height: 45px;
+    min-height: 45px;
+    background: lightskyblue;
 }
 
 .center{
@@ -24,13 +24,13 @@ html, body, .body{
 	min-height: 200px;
 	flex-direction: row;
 }
-	.center #menu{
+	.center #menu {
 		display: flex;
 		flex-direction: column;
 		margin-left: 40px;
 		margin-right: 20px;
-		max-width: 130px;
-		min-width: 130px;
+		max-width: 145px;
+		min-width: 145px;
 	}
 	.center #menu a{
 		white-space: nowrap;
@@ -39,8 +39,8 @@ html, body, .body{
 		border-bottom: 1px solid LightSkyBlue;
 		padding-left: 10px;
 	}
-	.center #menu a:hover{
-		background-color: LightSkyBlue;
+	.center #menu a:hover {
+		background-color: #f1f1f1;
 	}
 	.center #menu a:nth-child(1){
 		border-top: 1px solid LightSkyBlue;
@@ -157,4 +157,173 @@ html, body, .body{
 	display: flex;
 	flex-direction: column;
 }
+
+
+a.choise p {
+    margin: 5px 0 0 0;
+}
+
+
+
+.m_main:before {
+    content: '';
+    background-image: url(../img/home.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_main:hover:before { background-image: url(../img/home_h.png);}
+
+
+
+
+.m_profile:before {
+    content: '';
+    background-image: url(../img/profile.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_profile:hover:before { background-image: url(../img/profile_h.png);}
+
+
+
+.m_rooms:before {
+    content: '';
+    background-image: url(../img/rooms.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_rooms:hover:before { background-image: url(../img/rooms_h.png);}
+
+
+
+.m_users:before {
+    content: '';
+    background-image: url(../img/users.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_users:hover:before { background-image: url(../img/users_h.png);}
+
+
+
+.m_options:before {
+    content: '';
+    background-image: url(../img/options.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_options:hover:before { background-image: url(../img/options_h.png);}
+
+
+
+.m_exit:before {
+    content: '';
+    background-image: url(../img/exit.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    background-size: contain;
+    width: 24px;
+    position: relative;
+    float: left;
+    margin: 4px 10px 0 0;
+}
+
+
+
+.m_exit:hover:before { background-image: url(../img/exit_h.png);}
+
+
+.fix_bg_change {
+    display: block;
+    position: relative;
+}
+
+.fix_bg_change span {border: 2px solid rgb(255, 255, 255);}
+
+.fix_bg_change .bg_set1 {
+    width: 30px;
+    height: 30px;
+    background: black;
+    display: block;
+    margin: 5px;
+    float: left;
+	cursor:pointer;
+}
+
+.fix_bg_change .bg_set2 {
+    width: 30px;
+    height: 30px;
+    background: SteelBlue;
+    display: block;
+    margin: 5px;
+    float: left;
+	cursor:pointer;
+}
+.fix_bg_change .bg_set3 {
+    width: 30px;
+    height: 30px;
+    background: GhostWhite;
+    display: block;
+    margin: 5px;
+    float: left;
+	cursor:pointer;
+}
+
+.foot_r {
+    float: left;
+}
+
+.foot_r img {
+    height: 60px;
+    margin: 5px;
+}
+
+.foot_r img:hover {-webkit-filter: brightness(120%);}
+
 
