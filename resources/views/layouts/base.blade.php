@@ -64,7 +64,7 @@
 	
 	</div>
 	
-		<p>Elnikov</p>
+		<p>Kulikovskaya</p>
 	</div>
   </div>
   
