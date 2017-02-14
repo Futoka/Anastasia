@@ -1,4 +1,21 @@
-# Laravel PHP Framework
+# Социальная сеть
+## Установка
+- Перейти в папку domains
+- Копируем проект: git clone https://github.com/Futoka/social.git
+- Открыть консоль OpenServer cd social
+- composer install
+- Создать MySQL-базу с именем social
+- Создать .env (по примеру .env .example)
+- В этом файле подключиться к базе social 
+- php artisan migrate - выполнение миграции
+- php artisan db:seed
+
+### В проекте использованы следующие технологии:
+- "php": ">=5.5.9",
+- "laravel/framework": "5.2.*",
+- "intervention/image": "^2.3"
+
+#### По всем вопросам обращаться на электронную почту nastya96cool@gmail.com
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
@@ -21,19 +38,3 @@ Thank you for considering contributing to the Laravel framework! The contributio
 ## Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-##Помощь по установке
-
-### Перейти в domains
-### Прописать команды
-	git clone https://github.com/ZhElnikov/Social.git
-	cd laravel
-	composer self-update
-	composer install
-	composer self-update
-	создать .env
-	
